@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Trivia Game</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="jumbotron">
+        <h1 class="display-4">Totally Trivial Trivia!</h1>
+        <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+        <hr class="my-4">
+        <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+    </div>
+
+    <button id="start">start</button>
+
+    <h2 id="time">Time Remaining: </h2>
+
+    <div id=content>
+        <h2>The heart of a shrimp is located in its...</h2>
+        <label for="var_string"><input type="radio" name="variable" value="0" id="var_string" />Tail</label>
+        <label for="var_join"><input type="radio" name="variable" value="0" id="var_join" />Body</label>
+        <label for="var_info"><input type="radio" name="variable" value="25" id="var_info" />Head</label>
+        <label for="var_condition"><input type="radio" name="variable" value="0" id="var_condition"/>Allows you to make a decision based on a condition.</label>
+
+        <h2>A snail can sleep for...</h2>
+        <label for="var_string"><input type="radio" name="variable" value="0" id="var_string" />48 hours</label>
+        <label for="var_join"><input type="radio" name="variable" value="0" id="var_join" />One week</label>
+        <label for="var_info"><input type="radio" name="variable" value="0" id="var_info" />Eight months</label>
+        <label for="var_condition"><input type="radio" name="variable" value="25" id="var_condition"/>Three years</label>
+
+        <h2>How many noses does a slug have?</h2>
+        <label for="var_string"><input type="radio" name="variable" value="0" id="var_string" />One</label>
+        <label for="var_join"><input type="radio" name="variable" value="0" id="var_join" />Two</label>
+        <label for="var_info"><input type="radio" name="variable" value="0" id="var_info" />Four</label>
+        <label for="var_condition"><input type="radio" name="variable" value="25" id="var_condition"/>Six</label>
+
+        <h2>What is the only animal that cannot jump?</h2>
+        <label for="var_string"><input type="radio" name="variable" value="25" id="var_string" />Elephant</label>
+        <label for="var_join"><input type="radio" name="variable" value="0" id="var_join" />Penguin</label>
+        <label for="var_info"><input type="radio" name="variable" value="0" id="var_info" />Anteater</label>
+        <label for="var_condition"><input type="radio" name="variable" value="0" id="var_condition"/>Sloth</label>
+
+        <h2>On average, how many glasses of milk does a cow give in it's lifetime?</h2>
+        <label for="var_string"><input type="radio" name="variable" value="0" id="var_string" />1,000</label>
+        <label for="var_join"><input type="radio" name="variable" value="0" id="var_join" />50,000</label>
+        <label for="var_info"><input type="radio" name="variable" value="25" id="var_info" />200,000</label>
+        <label for="var_condition"><input type="radio" name="variable" value="0" id="var_condition"/>1 million</label>
+
+        <h2>What is a group of flamingos called?</h2>
+        <label for="var_string"><input type="radio" name="variable" value="0" id="var_string" />A pace</label>
+        <label for="var_join"><input type="radio" name="variable" value="0" id="var_join" />A congregation</label>
+        <label for="var_info"><input type="radio" name="variable" value="0" id="var_info" />A gam</label>
+        <label for="var_condition"><input type="radio" name="variable" value="25" id="var_condition"/>A flamboyance</label>
+
+        <h2>What is a group of porcupines called?</h2>
+        <label for="var_string"><input type="radio" name="variable" value="0" id="var_string" />A troop</label>
+        <label for="var_join"><input type="radio" name="variable" value="25" id="var_join" />A prickle</label>
+        <label for="var_info"><input type="radio" name="variable" value="0" id="var_info" />A colony</label>
+        <label for="var_condition"><input type="radio" name="variable" value="0" id="var_condition"/>A husk</label>
+
+        <h2>On average, domestic cats spend about what percentage of their time sleeping?</h2>
+        <label for="var_string"><input type="radio" name="variable" value="0" id="var_string" />40%</label>
+        <label for="var_join"><input type="radio" name="variable" value="0" id="var_join" />50%</label>
+        <label for="var_info"><input type="radio" name="variable" value="0" id="var_info" />60%</label>
+        <label for="var_condition"><input type="radio" name="variable" value="25" id="var_condition"/>70%</label>
+
+        <h2>Which animal was once mayor of a town in Alaska for 20 years?</h2>
+        <label for="var_string"><input type="radio" name="variable" value="0" id="var_string" />A lizard</label>
+        <label for="var_join"><input type="radio" name="variable" value="0" id="var_join" />A bear</label>
+        <label for="var_info"><input type="radio" name="variable" value="25" id="var_info" />A cat</label>
+        <label for="var_condition"><input type="radio" name="variable" value="0" id="var_condition"/>A dog</label>
+
+        <h2>The most popular dog name is...</h2>
+        <label for="var_string"><input type="radio" name="variable" value="25" id="var_string" />Max</label>
+        <label for="var_join"><input type="radio" name="variable" value="0" id="var_join" />Buddy</label>
+        <label for="var_info"><input type="radio" name="variable" value="0" id="var_info" />Rex</label>
+        <label for="var_condition"><input type="radio" name="variable" value="0" id="var_condition"/>Duke</label>
+
+    </div>
+
+    <h2>All Done!</h2>
+    <p>Correct Answers: </p>
+    <p>Incorrect Answers: </p>
+    <p>Unaswered: </p>
+</body>
+
+</html>
