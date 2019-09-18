@@ -1,9 +1,57 @@
+#hero {
+    background-color: #ffdead;
+}
+
+h1 {
+    text-align: center;
+    color: #762935;
+}
+
 h2 {
     font-size: 32px;
 }
 
+button {
+    background-color: #549380;
+    text-align: center;
+    display: inline-block;
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    width: 75px;
+    height: 35px;
+}
+
 #content {
-    background-color: #88D2D0;
+    background-color: #cd853f;
     text-align: center;
 
+}
+
+#trivia {
+    background-color: #ffffff;
+    opacity: .4;
+}
+
+img {
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    width: 300px;
+}
+
+#intro {
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    width: 300px;
+    text-align: center;
+}
+
+#stats {
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    width: 350px;
+    text-align: center;
 }

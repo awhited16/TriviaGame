@@ -6,6 +6,7 @@
   <title>Trivia Game</title>
 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/css/reset.css">
   <link rel="stylesheet" href="assets/css/style.css">
   <link href="https://fonts.googleapis.com/css?family=PT+Serif|Playfair+Display&display=swap" rel="stylesheet">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -14,20 +15,20 @@
 </head>
 
 <body>
-    <div class="jumbotron">
-        <h1 class="display-4">Totally Trivial Trivia!</h1>
+    <div id="hero" class="jumbotron">
+        <h1 class="display-4">Animal Trivia!</h1><br>
+        <img src="assets/images/Cheetah-background.jpg" alt="cheetah"><br>
         <span id="intro">
             <button id="start">Start</button>
         </span>
 
-        <span id="trivia"></span>
         <span id="answer"></span>
         
         <div id="content">
-            <span id="#trivia"></span>
+            <span id="trivia"></span>
         </div>
 
-        <div id="stats"></div>
+        <div id="stats"></div><br>
 
         <div id="submit"></div>
     </div>

@@ -96,10 +96,18 @@ $(document).ready(function() {
     function displayTrivia () {
         // loop through the 10 questions 
         for (var i = 0; i < 10; i++) {
-            $("#trivia").append(trivia[i].question + "<br>");
+            var qDiv = $("<div>").attr('id','q'+(i+1));
+            qDiv.append("<br>" + trivia[i].question + "<br>");
             // loops through answers for each radio button
             for (var j = 0; j <= 3; j++) {
-                $("#trivia").append("<input type='radio' name='" + trivia[i].name + " value='" + trivia[i].value + ">" + trivia[i].choices[j] + "<br>");
+                if(trivia[i].choices[j] === trivia[i].answer) {
+                    var isCorrect = true;
+                } else {
+                    var isCorrect = false;
+                }
+
+                qDiv.append("<input type='radio' choice='" + trivia[i].choices[j] + "' value='" + isCorrect + "'> " + trivia[i].choices[j] + "<br>");
+                $("#trivia").append(qDiv);
             }
         }
         
@@ -107,20 +115,135 @@ $(document).ready(function() {
 
 
     // submit button to end game
-
     $("#submit").on("click", function() {
+        var children = $("#q1").children("input:checked");
+        console.log(children);
+        console.log(children[0].attributes[1].value);
+        var choice1 = children[0].attributes[1].value;
+        if (choice1 === trivia[0].answer) {
+            console.log("correct");
+            correct++
+        } else if (choice1 !== trivia[0].answer) {
+            console.log("wrong!");
+            incorrect++;
+        }
 
-        for (var i = 0; i < 10; i++) {
-            if ($("input[name='" + trivia[i].name + "']:checked").val() === trivia[i].answer) {
-                correct++;
+        var children = $("#q2").children("input:checked");
+        console.log(children);
+        console.log(children[0].attributes[1].value);
+        var choice2 = children[0].attributes[1].value;
+        if (choice2 === trivia[1].answer) {
+            console.log("correct");
+            correct++
+        }
+        else {
+            console.log("wrong!");
+            incorrect++;
+        }
 
-            } else {
-                incorrect++;
-            };
-        };
+        var children = $("#q3").children("input:checked");
+        console.log(children);
+        console.log(children[0].attributes[1].value);
+        var choice3 = children[0].attributes[1].value;
+        if (choice3 === trivia[2].answer) {
+            console.log("correct");
+            correct++
+        }
+        else {
+            console.log("wrong!");
+            incorrect++;
+        }
 
-        
-        // $("input[name="variable"]:checked").value;
+        var children = $("#q4").children("input:checked");
+        console.log(children);
+        console.log(children[0].attributes[1].value);
+        var choice4 = children[0].attributes[1].value;
+        if (choice4 === trivia[3].answer) {
+            console.log("correct");
+            correct++
+        }
+        else {
+            console.log("wrong!");
+            incorrect++;
+        }
+
+        var children = $("#q5").children("input:checked");
+        console.log(children);
+        console.log(children[0].attributes[1].value);
+        var choice5 = children[0].attributes[1].value;
+        if (choice5 === trivia[4].answer) {
+            console.log("correct");
+            correct++
+        }
+        else {
+            console.log("wrong!");
+            incorrect++;
+        }
+
+        var children = $("#q6").children("input:checked");
+        console.log(children);
+        console.log(children[0].attributes[1].value);
+        var choice6 = children[0].attributes[1].value;
+        if (choice6 === trivia[5].answer) {
+            console.log("correct");
+            correct++
+        }
+        else {
+            console.log("wrong!");
+            incorrect++;
+        }
+
+        var children = $("#q7").children("input:checked");
+        console.log(children);
+        console.log(children[0].attributes[1].value);
+        var choice7 = children[0].attributes[1].value;
+        if (choice7 === trivia[6].answer) {
+            console.log("correct");
+            correct++
+        }
+        else {
+            console.log("wrong!");
+            incorrect++;
+        }
+
+        var children = $("#q8").children("input:checked");
+        console.log(children);
+        console.log(children[0].attributes[1].value);
+        var choice8 = children[0].attributes[1].value;
+        if (choice8 === trivia[7].answer) {
+            console.log("correct");
+            correct++
+        }
+        else {
+            console.log("wrong!");
+            incorrect++;
+        }
+
+        var children = $("#q9").children("input:checked");
+        console.log(children);
+        console.log(children[0].attributes[1].value);
+        var choice9 = children[0].attributes[1].value;
+        if (choice9 === trivia[8].answer) {
+            console.log("correct");
+            correct++
+        }
+        else {
+            console.log("wrong!");
+            incorrect++;
+        }
+
+        var children = $("#q10").children("input:checked");
+        console.log(children);
+        console.log(children[0].attributes[1].value);
+        var choice10 = children[0].attributes[1].value;
+        if (choice10 === trivia[9].answer) {
+            console.log("correct");
+            correct++;
+        }
+        else {
+            console.log("wrong!");
+            incorrect++;
+        }
 
         $("#trivia").hide();
         $("#submit").hide();
